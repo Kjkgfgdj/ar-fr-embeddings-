@@ -5,7 +5,7 @@ Includes notebooks for training, intrinsic/extrinsic evaluation, and model visua
 
 **Author:** Abdulaziz Almakdhdhoub
 
----
+
 
 ## Repository contents
 
@@ -21,7 +21,7 @@ Includes notebooks for training, intrinsic/extrinsic evaluation, and model visua
 ```
 > The `.pkl` files are small helper artifacts used by the evaluation notebooks.
 
----
+
 
 ## Setup
 
@@ -33,7 +33,7 @@ Install core dependencies:
 pip install -U gensim numpy pandas scikit-learn matplotlib jupyter umap-learn
 ```
 
----
+
 
 ## Download the pre‑trained model
 
@@ -50,7 +50,7 @@ gdown --id 17--g6koL3QA5W6DN93AKrA0SySmX7ZSG -O randomshuffle_5window_skipgram_3
 
 Place the file at the repository root (or adjust the path in your code).
 
----
+
 
 ## Quick usage
 
@@ -70,7 +70,7 @@ from gensim.models import KeyedVectors
 kv = KeyedVectors.load("randomshuffle_5window_skipgram_300size.model", mmap="r")
 ```
 
----
+
 
 ## Notebooks
 
@@ -89,7 +89,7 @@ kv = KeyedVectors.load("randomshuffle_5window_skipgram_300size.model", mmap="r")
 - **Visualization:** `models_visualization.ipynb`  
   - t‑SNE/UMAP projections and cluster inspection.
 
----
+
 
 ## Model details (summary)
 
@@ -101,38 +101,4 @@ kv = KeyedVectors.load("randomshuffle_5window_skipgram_300size.model", mmap="r")
   The corpus is **not** redistributed here; obtain it from the original source and follow its license.
 
 For exact hyper‑parameters (epochs, `min_count`, negative sampling, subsampling, etc.), see `ArbFrVec.ipynb`.
-
----
-
-## Data and licensing
-
-- Obtain Arabic–French parallel data from its original providers and respect their licenses.  
-- Add a `LICENSE` file to this repository to specify the code license.
-
----
-
-## Contributing
-
-Pull requests and issues are welcome. If you add experiments (new tokenizers, alignment methods, or benchmarks), include a short description and minimal reproduction steps.
-
----
-
-## Citation
-
-If you use this repository or the released model in academic work, please cite:
-
-```
-@software{almakdhdhoub_ar_fr_embeddings_2025,
-  author = {Abdulaziz Almakdhdhoub},
-  title  = {Arabic–French Cross‑Lingual Word Embeddings with Random Word Shuffling},
-  year   = {2025},
-  url    = {https://github.com/<your-username>/ar-fr-embeddings}
-}
-```
-
----
-
-## Contact
-
-Open an issue on GitHub for questions or suggestions.
 
